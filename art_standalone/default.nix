@@ -1,20 +1,21 @@
-{lib
-,stdenv
-,fetchFromGitLab
-,wolfssl
-,bionic-translation
-,python3
-,which
-,jdk17
-,zip
-,xz
-,icu
-,zlib
-,libcap
-,expat
-,openssl
-,libbsd
-,lz4
+{
+  lib,
+  stdenv,
+  fetchFromGitLab,
+  wolfssl,
+  bionic-translation,
+  python3,
+  which,
+  jdk17,
+  zip,
+  xz,
+  icu,
+  zlib,
+  libcap,
+  expat,
+  openssl,
+  libbsd,
+  lz4,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "art-standalone";
@@ -58,8 +59,11 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs .
     sed -i "s|/bin/bash|${runtimeShell}|" build/core/config.mk build/core/main.mk
   '';
+
   makeFlags = [
-    "____LIBDIR=lib" "____PREFIX=${placeholder "out"}" "____INSTALL_ETC=${placeholder "out"}/etc"
+    "____LIBDIR=lib"
+    "____PREFIX=${placeholder "out"}"
+    "____INSTALL_ETC=${placeholder "out"}/etc"
   ];
 
   meta = {
