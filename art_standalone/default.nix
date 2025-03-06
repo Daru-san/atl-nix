@@ -53,6 +53,11 @@ stdenv.mkDerivation (finalAttrs: {
     bionic-translation
   ];
 
+  postPatch = ''
+    chmod +x dalvik/dx/etc/{dx,dexmerger}
+    patchShebangs .
+    sed -i "s|/bin/bash|${runtimeShell}|" build/core/config.mk build/core/main.mk
+  '';
   makeFlags = [
     "____LIBDIR=lib" "____PREFIX=${placeholder "out"}" "____INSTALL_ETC=${placeholder "out"}/etc"
   ];
