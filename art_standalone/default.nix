@@ -25,8 +25,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "android_translation_layer";
     repo = "art_standalone";
-    rev = "57f9bbd9417b67a6d7bf70a7d7d457fc894250f5";
-    hash = "sha256-VfyU/YKLkIeg+EF3E1Y+rrLp/j7jPGTiBZGT1dC3pfE=";
+    rev = "aa709f68d03e83d35c5e8a58e77760e5be9185bc";
+    hash = "sha256-YNAXbtcaZHWaFPbJ+wUFfuHAwU3HrwF6tx6lQzlkWZA=";
   };
 
   enableParallelBuilding = true;
