@@ -18,8 +18,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "android_translation_layer";
     repo = "bionic_translation";
-    rev = "e502e9273c5fb600751f53a1d843ad38c910b2d8";
-    hash = "sha256-6V/CLD7JgkEwc0Y26XVBZGN5c7AUEGFHbC++PjJJhyc=";
+    rev = "38cbae66d5c82a26e6b81c4c17733f17fada4f85";
+    hash = "sha256-CHBf77YAXiOoNwZxCCSCkHOBKwQXrWrWmZyHmhsYAVI=";
   };
 
   strictDeps = true;
