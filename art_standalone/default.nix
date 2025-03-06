@@ -16,6 +16,7 @@
   openssl,
   libbsd,
   lz4,
+  runtimeShell,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "art-standalone";
